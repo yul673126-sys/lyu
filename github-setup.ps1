@@ -1,4 +1,4 @@
-# github-setup.ps1
+﻿# github-setup.ps1
 # 把工作区里的 .github-token 转换成 git 能直接读取的 .git-credentials，
 # 然后用真实的 ls-remote 验证这个 token 到底有没有权限访问目标仓库。
 #

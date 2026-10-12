@@ -1,4 +1,4 @@
-# push-gh.ps1 —— 在 DSH 沙箱里向 GitHub 推送当前分支。
+﻿# push-gh.ps1 —— 在 DSH 沙箱里向 GitHub 推送当前分支。
 #
 # 为什么不能用普通的 git push / git-gh.cmd：
 #   沙箱禁止创建命名管道，而 git 与凭据助手（store / manager 都一样）之间
