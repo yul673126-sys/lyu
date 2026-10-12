@@ -8,7 +8,15 @@ REM   3) ~/.gitconfig is not writable (outside workspace)   -> keep credentials 
 REM
 REM Usage:  git-gh.cmd <any git arguments>
 REM   e.g.  git-gh.cmd clone https://github.com/owner/repo.git
-REM         git-gh.cmd -C repo push -u origin main
+REM         git-gh.cmd -C repo ls-remote origin
+REM
+REM LIMITATION (verified): any operation that needs credentials -- push, and
+REM clone/fetch of PRIVATE repos -- will fail here, because this sandbox cannot
+REM create the named pipes git uses to talk to a credential helper:
+REM     sh.exe: *** fatal error - couldn't create signal pipe, Win32 error 5
+REM     fatal: could not read Username for 'https://github.com'
+REM For pushing, use push-gh.ps1 instead (it injects the token into the URL,
+REM bypassing the helper entirely).
 
 setlocal
 set "GIT_EXE=C:\Program Files\Git\cmd\git.exe"
