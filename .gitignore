@@ -1,0 +1,16 @@
+# === 凭据：绝对不能提交 ===
+.github-token
+.git-credentials
+*.token
+
+# === 系统 / 编辑器杂项 ===
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+*.swp
+*~
+
+# === 临时产物 ===
+_gh_test/
+*.log
