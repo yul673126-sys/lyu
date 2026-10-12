@@ -2,6 +2,9 @@
 .github-token
 .git-credentials
 *.token
+.credentials*.bak
+.ds-key.tmp
+*.key
 
 # === 系统 / 编辑器杂项 ===
 Thumbs.db
